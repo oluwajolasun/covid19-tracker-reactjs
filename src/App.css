@@ -5,20 +5,26 @@
 
 .header {
 	color: rgb(0, 0, 0) !important;
-	background-color: rgb(255, 255, 255);
+	background-color: rgba(141, 153, 174, 0.74);
 	color: rgb(0, 0, 0);
 	text-align: center;
+	text-transform: uppercase;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 10vh;
+	min-height: 15vh;
+	padding: 0 0.1rem;
 }
 
 .paper {
-	margin: 0.9rem;
+	margin: 1rem;
 }
 
-
+.info {
+	min-height: 77vh;
+	display: flex;
+	flex-direction: column;
+}
 
 .confirmed {
 	background-color: rgba(0, 0, 225, 0.3);
@@ -46,34 +52,20 @@
 	text-transform: uppercase;
 	font-weight: 100;
 	font-size: 0.7rem;
-	letter-spacing: 2px;
+	letter-spacing: 4px;
 	margin: 0;
-	height: 5vh;
+	min-height: 8vh;
+	padding: 0 1rem;
 }
 
-/* @media (max-width: 546px) {
-	.app {
-		min-height: 100vh;
-	}
-
+@media (min-width: 546px) {
 	.paper {
-		margin: 0.9rem;
+		margin: 1rem;
 	}
+}
 
-	.confirmed {
-		background-color: rgba(0, 0, 225, 0);
-		width: 15rem;
-		height: 7rem;
+@media (min-width: 1110px) {
+	.paper {
+		margin: 3rem;
 	}
-
-	.recovered {
-		background-color: rgba(0, 255, 0, 0.3);
-		width: 15rem;
-		height: 7rem;
-	}
-
-	.deaths {
-		width: 15rem;
-		height: 7rem;
-	}
-} */
+}

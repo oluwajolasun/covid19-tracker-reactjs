@@ -1,10 +1,9 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
 
 const Header = () => {
 	return (
 		<div className='header'>
-			<Typography variant='h4'>Global COVID tracker</Typography>
+			<h1>Global COVID-19 Tracker</h1>
 		</div>
 	);
 };
