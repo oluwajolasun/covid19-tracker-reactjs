@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import { fetchData } from './api';
+import Header from './Components/Header';
+import Cards from './Components/Cards';
+import Footer from './Components/Footer';
+import Countries from './Components/Countries';
+import { Grid } from '@material-ui/core';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	const [fetchedData, setFetchedData] = useState({});
+	const [country, setCountry] = useState('');
+
+	useEffect(() => {
+		const fetchAPI = async () => {
+			setFetchedData(await fetchData());
+		};
+		fetchAPI();
+	}, []);
+
+	console.log(country);
+
+	const handleOnCountryChange = async (country) => {
+		setFetchedData(await fetchData(country));
+		setCountry(country);
+		console.log(fetchedData);
+	};
+
+	return (
+		<div className='app'>
+			<Header />
+			<Grid
+				container
+				direction='column'
+				justify='center'
+				alignItems='center'
+				className='info'>
+				<Cards data={fetchedData} />
+				<Countries handleOnCountryChange={handleOnCountryChange} />
+			</Grid>
+			<Footer />
+		</div>
+	);
+};
 
 export default App;
