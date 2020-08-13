@@ -25,7 +25,7 @@ function Cards({ data: { confirmed, recovered, deaths, lastUpdate } }) {
 									separator=','
 								/>
 							</Typography>
-							<Typography>
+							<Typography nowarp={false}>
 								{new Date(lastUpdate).toGMTString()}
 							</Typography>
 							<Typography>
@@ -73,7 +73,7 @@ function Cards({ data: { confirmed, recovered, deaths, lastUpdate } }) {
 								{new Date(lastUpdate).toGMTString()}
 							</Typography>
 							<Typography>
-								Deaths cases of COVID-19
+								Death cases of COVID-19
 							</Typography>
 						</CardContent>
 					</Card>
@@ -90,22 +90,22 @@ function Cards({ data: { confirmed, recovered, deaths, lastUpdate } }) {
 				<Grid className='paper'>
 					<Skeleton
 						variant='rect'
-						width={274.45}
-						height={161.6}
+						width={269.4}
+						height={153.6}
 					/>
 				</Grid>
 				<Grid className='paper'>
 					<Skeleton
 						variant='rect'
-						width={274.45}
-						height={161.6}
+						width={269.4}
+						height={153.6}
 					/>
 				</Grid>
 				<Grid className='paper'>
 					<Skeleton
 						variant='rect'
-						width={274.45}
-						height={161.6}
+						width={269.4}
+						height={153.6}
 					/>
 				</Grid>
 			</Grid>
