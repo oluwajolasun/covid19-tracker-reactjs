@@ -1,3 +1,4 @@
+/* For Laptop Display */
 .app {
 	min-height: 100vh;
 	background-color: rgb(237, 242, 244);
@@ -11,18 +12,18 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 14vh;
-	padding: 0rem;
+	min-height: 15vh;
 }
 
 .header > h1 {
 	margin: 0;
-	font-weight: 400;
-	font-size: 2.2rem;
+	padding: 0.2rem;
+	font-weight: 500;
+	font-size: 3rem;
 }
 
 .paper {
-	margin: 0.5rem;
+	margin: 0;
 }
 
 .info {
@@ -32,21 +33,45 @@
 }
 
 .confirmed {
-	background-color: rgba(0, 0, 225, 0.3);
+	background-color: rgba(0, 0, 225, 0.3) !important;
 	padding: 1rem !important;
+	width: 270px !important;
+	height: 117px !important;
+}
+
+.confirmed__skelton {
+	padding: 1rem !important;
+	width: 270px !important;
+	height: 117px !important;
 }
 
 .recovered {
-	background-color: rgba(0, 255, 0, 0.3);
+	background-color: rgba(0, 255, 0, 0.3) !important;
 	padding: 1rem !important;
+	width: 270px !important;
+	height: 117px !important;
+}
+
+.recovered__skeleton {
+	padding: 1rem !important;
+	width: 270px !important;
+	height: 117px !important;
 }
 
 .deaths {
-	background-color: rgba(225, 0, 0, 0.3);
+	background-color: rgba(225, 0, 0, 0.3) !important;
 	padding: 1rem !important;
+	width: 270px !important;
+	height: 117px !important;
 }
 
-.select {
+.deaths__skeleton {
+	padding: 1rem !important;
+	width: 270px !important;
+	height: 117px !important;
+}
+
+.country__select {
 	width: 17rem;
 }
 
@@ -59,15 +84,20 @@
 	align-items: center;
 	text-transform: uppercase;
 	letter-spacing: 4px;
-	min-height: 6vh;
+	min-height: 5vh;
 	padding: 0 1rem;
 }
 
 .footer > p {
 	font-size: 0.6rem;
 	margin: 0;
-	padding: 0;
+	padding: 0.9rem;
 	font-weight: 100;
+}
+
+.footer > p > a {
+	color: white;
+	text-decoration: none;
 }
 
 @media (min-width: 571px) {
@@ -77,13 +107,22 @@
 }
 
 /* iPhone X */
-/* @media (width: 375px) {
+@media (max-width: 570px) {
 	.header {
 		min-height: 12vh;
 	}
 
+	.header > h1 {
+		font-weight: 500;
+		font-size: 2.2rem;
+	}
+
 	.info {
 		min-height: 80vh;
+	}
+
+	.paper {
+		margin: 0.8rem;
 	}
 
 	.footer {
@@ -91,81 +130,119 @@
 	}
 }
 
-/* iPhone 6+ */
-/* @media (width: 414px) {
-	.header {
-		height: 12vh;
-	}
-
-	.info {
-		height: 80vh;
-	}
-
-	.footer {
-		height: 8vh;
-	}
-} */
-
 /* iPhone 6 */
-/* @media (height: 667px) {
+@media (height: 667px) {
 	.header {
 		min-height: 14vh;
 	}
 
+	.header > h1 {
+		font-weight: 500;
+		font-size: 2.2rem;
+	}
+
 	.info {
-		min-height: 80vh;
+		min-height: 78vh;
+	}
+
+	.paper {
+		margin: 0.3rem;
+	}
+
+	.confirmed {
+		background-color: rgba(0, 0, 225, 0.3) !important;
+		padding: 0.5rem !important;
+		width: 270px !important;
+		height: 121px !important;
+	}
+
+	.confirmed__skelton {
+		padding: 0.5rem !important;
+		width: 270px !important;
+		height: 121px !important;
+	}
+
+	.recovered {
+		background-color: rgba(0, 255, 0, 0.3) !important;
+		padding: 0.5rem !important;
+		width: 270px !important;
+		height: 121px !important;
+	}
+
+	.recovered__skeleton {
+		padding: 0.5rem !important;
+		width: 270px !important;
+		height: 121px !important;
+	}
+
+	.deaths {
+		background-color: rgba(225, 0, 0, 0.3) !important;
+		padding: 0.5rem !important;
+		width: 270px !important;
+		height: 121px !important;
+	}
+
+	.deaths__skeleton {
+		padding: 0.5rem !important;
+		width: 270px !important;
+		height: 121px !important;
 	}
 
 	.footer {
 		min-height: 8vh;
 	}
-} */
-
-/* iPhone 4 */
-/* @media (width: 320px) {
-	.header {
-		min-height: 20vh;
-	}
-
-	.info {
-		min-height: 80vh;
-	}
-
-	.footer {
-		min-height: 10vh;
-	}
-} */
-
-/* Tabs above
-@media (width: 546px) {
-	.header {
-		height: 12vh;
-	}
-
+}
+/* iPhone 5 */
+@media (max-width: 320px) {
 	.header > h1 {
-		font-weight: 400;
-		font-size: 3rem;
+		font-weight: 500;
+		font-size: 2.2rem;
+		padding: 1rem;
 	}
 
-	.info {
-		height: 70vh;
+	.confirmed {
+		background-color: rgba(0, 0, 225, 0.3) !important;
+		padding: 0.5rem !important;
+		width: 270px !important;
+		height: fit-content !important;
 	}
 
-	.paper {
-		margin: 1rem 2rem;
+	.confirmed__skelton {
+		padding: 0.5rem !important;
+		width: 270px !important;
+		height: fit-content !important;
 	}
 
-	.footer {
-		height: 4vh;
-	}
-} */
-
-/* @media (min-width: 1110px) {
-	.header > h1 {
-		font-size: 3rem;
+	.recovered {
+		background-color: rgba(0, 255, 0, 0.3) !important;
+		padding: 0.5rem !important;
+		width: 270px !important;
+		height: fit-content !important;
 	}
 
-	.paper {
-		margin: 3rem;
+	.recovered__skeleton {
+		padding: 0.5rem !important;
+		width: 270px !important;
+		height: fit-content !important;
 	}
-} */
+
+	.deaths {
+		background-color: rgba(225, 0, 0, 0.3) !important;
+		padding: 0.5rem !important;
+		width: 270px !important;
+		height: fit-content !important;
+	}
+
+	.deaths__skeleton {
+		padding: 0.5rem !important;
+		width: 270px !important;
+		height: fit-content !important;
+	}
+
+	.footer > p {
+		font-size: 0.5rem;
+		margin: 0;
+		padding: 0.5rem;
+		font-weight: 100;
+	}
+}

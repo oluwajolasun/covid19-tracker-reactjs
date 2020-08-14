@@ -13,10 +13,10 @@ const Countries = ({ handleOnCountryChange }) => {
 	}, [setFetchedCountries]);
 
 	return (
-		<div className='form'>
+		<div>
 			<FormControl>
 				<NativeSelect
-					className='select'
+					className='country__select'
 					onChange={(e) =>
 						handleOnCountryChange(e.target.value)
 					}>
